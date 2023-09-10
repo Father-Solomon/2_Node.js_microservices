@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "baseUrl": "./",
+    "strict": false,
+    "moduleResolution": "node"
+  }
+}
