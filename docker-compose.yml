@@ -8,7 +8,7 @@ services:
     ports:
       - "3000:3000"
     env_file:
-      - .env
+      - ./service1/.env
     depends_on:
       - rabbitmq
     networks:
@@ -22,7 +22,7 @@ services:
     ports:
       - "4000:4000"
     env_file:
-      - .env
+      - ./service1/.env
     depends_on:
       - rabbitmq
     networks:

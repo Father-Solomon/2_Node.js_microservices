@@ -1,7 +1,8 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import { swaggerUi, specs } from './swagger'; // Import your Swagger configuration
+import specs from "./swagger"; // Import your Swagger configuration
 import amqp from 'amqplib/callback_api';
+import swaggerUi from "swagger-ui-express";
 
 const app = express();
 const port = process.env.PORT || 4000; // Use a different port than Service 1
