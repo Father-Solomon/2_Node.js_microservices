@@ -1,0 +1,15 @@
+{
+  "name": "2_node.js_microservices",
+  "version": "1.0.0",
+  "description": "2 node.js microservices that communicate either via RabbitMQ with docker-compose and use environment variables. Project written in Typescript and have a linter.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}
