@@ -4,7 +4,9 @@
   "description": "2 node.js microservices that communicate either via RabbitMQ with docker-compose and use environment variables. Project written in Typescript and have a linter.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "up": "docker compose up --build -d",
+    "down": "docker compose down",
+    "logs": "docker logs tvs-server -f --since 10m"
   },
   "keywords": [],
   "author": "",
@@ -13,3 +15,4 @@
     "typescript": "^5.2.2"
   }
 }
+
