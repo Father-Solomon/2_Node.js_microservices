@@ -1,0 +1,18 @@
+{
+  "name": "2_node.js_microservices",
+  "version": "1.0.0",
+  "description": "2 node.js microservices that communicate either via RabbitMQ with docker-compose and use environment variables. Project written in Typescript and have a linter.",
+  "main": "index.js",
+  "scripts": {
+    "up": "docker compose up --build -d",
+    "down": "docker compose down",
+    "logs": "docker logs tvs-server -f --since 10m"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}
+

@@ -1,0 +1,41 @@
+version: '3'
+services:
+  service1:
+    container_name: service1
+    build:
+      context: ./service1
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./service1/.env
+    depends_on:
+      - rabbitmq
+    networks:
+      - my-network
+
+  service2:
+    container_name: service2
+    build:
+      context: ./service2
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000"
+    env_file:
+      - ./service1/.env
+    depends_on:
+      - rabbitmq
+    networks:
+      - my-network
+
+  rabbitmq:
+    container_name: rabbitmq
+    image: "rabbitmq:management"
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - my-network
+
+networks:
+  my-network:
